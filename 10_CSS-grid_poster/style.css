@@ -1,0 +1,81 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  font-family: Helvetica, sans-serif;
+}
+
+/* ------------------------------------- set grids */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr 1fr 1fr;
+  
+  width: 600px;
+  margin: 0 auto;
+  background-color: #dbe1d8;
+}
+
+section {
+  display: grid;
+  /* grid-template-columns: 200px 400px 200px;
+  grid-template-rows: 200px 400px 200px; */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+
+  height: 600px;
+}
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+}
+
+/* ------------------------------------- text styles */
+
+header {
+  font-size: 4.2em;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+footer p {
+  font-size: .7em;
+  padding: 10px 20px;
+}
+
+/* ------------------------------------- gradient colors */
+
+.purple {
+  background-color: #2D2A7D;
+}
+.blue {
+  background-color: #009FCB;
+} 
+.blue-green {
+  background: linear-gradient(135deg, #009FCB 50%, #018242 50%);
+}
+.pink {
+  background-color: #CD1878;
+}
+.white-yellow {
+  background: linear-gradient(135deg, #dbe1d8 50%, #D4B312 50%);
+}
+.green {
+  background-color: #018242;
+}
+.pink-red {
+  background: linear-gradient(135deg, #CD1878 50%, #C3181E 50%);
+}
+.red {
+  background-color: #C3181E;
+}
+.black {
+  background-color: #2E2B2E;
+}
+
