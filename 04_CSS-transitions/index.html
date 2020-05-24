@@ -11,9 +11,15 @@
       box-sizing: border-box;
     }
 
+    .btn-wrapper {
+      width: 100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
     .btn-container{
       padding: 15px;
-      margin: 20px;
+      margin: 40px auto;
       width: 30px;
       height: 30px;
       
@@ -21,15 +27,14 @@
       flex-flow: row nowrap;
       overflow: hidden;
 
-      position: relative;
-
       background-color: black;
       color: rgb(255, 255, 255);
 
-      border-radius: 50%;
+      border-radius: 30px;
       box-shadow: 0 0 0px lightgrey;
+      transition: 300ms ease-in;
+      transition-delay: 400ms;
 
-      transition: 200ms ease-in 200ms;
 }
 
     .btn-container:hover {
@@ -41,38 +46,111 @@
       text-decoration: none;
       border-radius: 30px;
       box-shadow: 0 10px 10px lightgrey;
-      transition: 200ms ease-in 200ms;
+      transition: 300ms ease-in;
     } 
 
     .btn-icon {
-      width: 25px;
-      position: relative;
-      top: 0px;
-      left: 4px;
+      width: 26px;
+      margin: 2px;
     }
 
     .btn-txt {
-      position: absolute;
-      top: 50px;
-      left: 60px;
+      font-size: 18px;
       opacity: 0;
-      transition: 200ms ease-in 200ms;
+      /* transform: translatex(90px); */
+      transform: translate(5px,30px);
+      transition: 200ms ease-in ;
+      transition-delay: 100ms;
     }
 
     .btn-container:hover .btn-txt {
-      position: absolute;
-      top: 22px;
-      left: 60px;
       opacity: 1;
-      transition: 200ms ease-in 200ms;
+      transform: translate(5px, 6px);
+      transition: 200ms ease-in ;
+      transition-delay: 300ms;
     }
+
+.box-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+.box-main {
+  width: 150px;
+  height: 150px;
+  background-color: lightgrey;
+}
+
+.box-letter {
+ margin: 0;
+ padding: 0;
+
+ position: absolute;
+ z-index: 3;
+
+ font-size: 150px;
+ color: white;
+}
+
+.slide-x {
+  width: 150px;
+  height: 150px;
+
+  position: absolute;
+  z-index: 3;
+
+  background-color: limegreen;
+  transform: translatex(-100%);
+  transition: 200ms ease-in;
+  transition-delay: 200ms;
+}
+
+.slide-XY {
+  width: 150px;
+  height: 150px;
+
+  position: absolute;
+  z-index: 2;
+  
+  background-color: black;
+  transform: translate(100%, 100%);
+  transition: 300ms ease-in;
+  transition-delay: 500ms;
+}
+.box-wrapper:hover .slide-x {
+  transform: translatex(0);
+  transition: 200ms ease-in ;
+  transition-delay: 500ms;
+}
+.box-wrapper:hover .slide-XY {
+  transform: translate(0);
+  transition: 200ms ease-in ;
+  transition-delay: 100ms;
+}
 
   </style>
 </head>
 <body>
-  <div class="btn-container">
+  <div class="btn-wrapper">
+  <a class="btn-container">
     <img src="bookmark.svg" alt="" class="btn-icon"> 
     <span class="btn-txt"> Book</span>
+  </a>
+</div>
+
+  <div class="box-wrapper">
+    <div class="slide-x"></div>
+    <div class="box-main"></div>
+    <p class="box-letter">B</p>
+    <div class="slide-XY"></div>
   </div>
+
 </body>
 </html>
