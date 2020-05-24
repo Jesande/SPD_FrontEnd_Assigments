@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS transitions exercise</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    .btn-container{
+      padding: 15px;
+      margin: 20px;
+      width: 30px;
+      height: 30px;
+      
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: hidden;
+
+      position: relative;
+
+      background-color: black;
+      color: rgb(255, 255, 255);
+
+      border-radius: 50%;
+      box-shadow: 0 0 0px lightgrey;
+
+      transition: 200ms ease-in 200ms;
+}
+
+    .btn-container:hover {
+      width: 100px;
+      height: 30px;
+
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 10px 10px lightgrey;
+      transition: 200ms ease-in 200ms;
+    } 
+
+    .btn-icon {
+      width: 25px;
+      position: relative;
+      top: 0px;
+      left: 4px;
+    }
+
+    .btn-txt {
+      position: absolute;
+      top: 50px;
+      left: 60px;
+      opacity: 0;
+      transition: 200ms ease-in 200ms;
+    }
+
+    .btn-container:hover .btn-txt {
+      position: absolute;
+      top: 22px;
+      left: 60px;
+      opacity: 1;
+      transition: 200ms ease-in 200ms;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="btn-container">
+    <img src="bookmark.svg" alt="" class="btn-icon"> 
+    <span class="btn-txt"> Book</span>
+  </div>
+</body>
+</html>
