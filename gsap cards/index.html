@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jesande - GSAP Cards</title>
+  <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* hide Cards with CSS */
+    #dolphin {
+      display: none;
+    }
+    #island {
+      display: none;
+    }
+    #earth {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <article class="card" id="dolphin">
+      <img src="img/dolphin.svg" width="180" alt="Dolphin illustration." class="card__image">
+      <img src="img/blob-1.svg" alt="" class="card__image--bg">
+      <header class="card__header">
+        <h2 class="card__title">Dolphins and plastic</h2>
+        <p class="card__description">Almost ten per cent of whales, dolphins, and porpoises examined as part of a new Irish study were found to have plastics in their digestive tracts. The study published in Environmental Pollution found that 8.5 per cent (45 individuals) of Irish cetaceans tested had marine debris in their stomachs and intestines.</p>
+        <a href="#" class="card__link" >Learn about the research</a>
+      </header>
+    </article>
+
+    <article class="card" id="island" >
+      <img src="img/island.svg" width="180" alt="Island illustration." class="card__image">
+      <img src="img/blob-2.svg" alt="" class="card__image--bg">
+      <header class="card__header">
+        <h2 class="card__title">Palm oil effects</h2>
+        <p class="card__description">Palm oil has been and continues to be a major driver of deforestation of some of the world’s most biodiverse forests, destroying the habitat of already endangered species like the Orangutan, pygmy elephant and Sumatran rhino. This forest loss coupled with conversion of carbon rich peat soils are throwing out millions of tonnes of greenhouse gases into the atmosphere and contributing to climate change.</p>
+        <a href="#" class="card__link">What you need to know</a>
+      </header>
+    </article>
+
+    <article class="card" id="earth" >
+      <img src="img/earth.svg" width="180" alt="Planet Earth illustration." class="card__image">
+      <img src="img/blob-3.svg" alt="" class="card__image--bg">
+      <header class="card__header">
+        <h2 class="card__title">Climate crisis</h2>
+        <p class="card__description">A report by experts from 27 national science academies has set out the widespread damage global heating is already causing to people’s health and the increasingly serious impacts expected in future. Scorching heatwaves and floods will claim more victims as extreme weather increases but there are serious indirect effects too, from spreading mosquito-borne diseases to worsening mental health.</p>
+        <a href="#" class="card__link">Read the  health report</a>
+      </header>
+    </article>
+
+  </div>
+
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__listitem"><a href="#dolphin" class="navigation__link" id="dolphin-btn" onclick="fadeIn()">Dolphins and plastic</a></li>
+      <li class="navigation__listitem"><a href="#island" class="navigation__link" id="island-btn" onclick="fadeIn()">Palm oil effects</a></li>
+      <li class="navigation__listitem"><a href="#earth" class="navigation__link" id="earth-btn" onclick="fadeIn()">Climate crisis</a></li>
+    </ul>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+
+  <script>
+    //set the variables
+    var dolphinBtn = document.getElementById("dolphin-btn");
+    var dolphinCard = document.getElementById("dolphin");
+    var islandBtn = document.getElementById("island-btn");
+    var islandCard = document.getElementById("island");
+    var earthBtn = document.getElementById("earth-btn");
+    var earthCard = document.getElementById("earth");
+
+    //Simple animation with timeline
+    function fadeIn(selector) {
+      var timeline = gsap.timeline();
+      timeline.from(selector + " " + ".card__image--bg", {scale:0, duration: 2, alpha: 0});
+      timeline.from(selector + " " + ".card__image", {scale:0, duration: .5, alpha: 0}, .5);
+      timeline.from(selector + " " + ".card__title", {y:-100, duration: .35, alpha: 0, ease: "back"});
+      timeline.from(selector + " " + ".card__description", {y:-100, duration: .35, alpha: 0, ease: "back"});
+      timeline.from(selector + " " + ".card__link", {y:-100, duration: .35, alpha: 0, ease: "back"});
+      gsap.to(selector + " " + ".card__image--bg" , {rotate:360, duration:60, repeat: -1});
+      gsap.to(selector + " " + ".card__image", {y:5, duration: 1, repeat: -1, yoyo: true});
+    };
+
+    //on click event
+    dolphinBtn.addEventListener("click", showDolphin);
+    function showDolphin() {
+      dolphinCard.style.display = 'grid';
+      fadeIn("#dolphin");
+      islandCard.style.display = 'none';
+      earthCard.style.display = 'none';
+    };
+    islandBtn.addEventListener("click", showIsland);
+    function showIsland() {
+      dolphinCard.style.display ='none';
+      islandCard.style.display = 'grid';
+      fadeIn("#island");
+      earthCard.style.display = 'none';
+    };
+    earthBtn.addEventListener("click", showEarth);
+    function showEarth() {
+      dolphinCard.style.display = 'none';
+      islandCard.style.display = 'none';
+      earthCard.style.display = 'grid';
+      fadeIn("#earth");
+    };
+
+    // start with the dolphin animation
+    showDolphin();
+    fadeIn();
+
+  </script>
+</body>
+</html>

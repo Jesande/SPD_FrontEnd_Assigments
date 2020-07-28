@@ -1,0 +1,64 @@
+/* button */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.btn-wrapper {
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn-container{
+  padding: 15px;
+  margin: 40px auto;
+  width: 30px;
+  height: 30px;
+  
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+
+  background-color: black;
+  color: rgb(255, 255, 255);
+
+  border-radius: 30px;
+  box-shadow: 0 0 0px lightgrey;
+  transition: 200ms ease-out;
+  transition-delay: 300ms;
+
+}
+
+.btn-container:hover {
+  width: 100px;
+  height: 30px;
+
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px lightgrey;
+  transition: 200ms ease-in;
+} 
+
+.btn-icon {
+  width: 26px;
+  margin: 2px;
+}
+
+.btn-txt {
+  font-size: 18px;
+  opacity: 0;
+  transform: translate(5px,30px);
+  transition: 200ms ease-out ;
+  transition-delay: 100ms;
+}
+
+.btn-container:hover .btn-txt {
+  opacity: 1;
+  transform: translate(5px, 6px);
+  transition: 200ms ease-in ;
+  transition-delay: 200ms;
+}

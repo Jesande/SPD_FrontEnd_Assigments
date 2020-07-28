@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesande - Milton Glazer Poster</title>
+</head>
+<body>
+  <style>
+    body {
+      text-align: center; 
+      background-color: black;
+      }
+    
+    h1 {
+      width:300px; 
+      color: white; 
+      position: absolute; 
+      top:220px; 
+      left:38%;
+      font-size: 40px;
+    }
+
+    .st0{fill:#80FD84;}
+    .st1{fill:#FF485A;}
+    .st2{fill:#C1FD00;}
+    .st3{fill:#FEBF00;}
+    .st4{fill:#7DFD7D;}
+    .st5{fill:#FF475A;}
+    .st6{fill:#4A8FA6;}
+    .st7{fill:#4E8EA4;}
+  </style>
+
+  <h1 id="not_about">It's not about</h1>
+  <h1 id="about">It's about</h1>
+  <svg id="poster" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  viewBox="0 0 1008 661" style="enable-background:new 0 0 1008 661;">
+    <g id="top">
+      <rect x="302.5" y="13.5" class="top st0" width="148" height="33"/>
+      <rect x="574" y="13.5" class="top st1" width="33" height="33"/>
+      <rect x="774" y="13.5" class="top st6" width="33" height="33"/>
+    </g>
+    <g id="right">
+      <rect x="958.2" y="76.3" class="right st3" width="33" height="155"/>
+      <rect x="957.2" y="374.3" class="right st1" width="33" height="33"/>
+      <rect x="957.2" y="519.3" class="right st4" width="33" height="123"/>
+    </g>
+    <g id="bottom">
+      <rect x="698.2" y="612.3" class="bottom st3" width="33" height="33"/>
+      <rect x="206.2" y="612.3" class="bottom st3" width="121" height="33"/>
+      <rect x="380.2" y="612.3" class="bottom st5" width="152" height="33"/>
+    </g>
+    <g id="left">
+      <rect x="14.5" y="107.5" class="left st1" width="33" height="155"/>
+      <rect x="14.2" y="360.3" class="left st6" width="32" height="142"/>
+      <rect x="15" y="534" class="left st1" width="31.5" height="45"/>
+      <rect x="14.5" y="12.5" class="left st7" width="33" height="33"/>
+      <rect x="15.5" y="316.5" class="left st3" width="31" height="31"/>
+    </g>
+    <g id="M" >
+      <rect x="340.2" y="235.3" class="m st3" width="155" height="33"/>
+      <rect x="340.2" y="235.3" class="m st2" width="33" height="155"/>
+      <rect x="401.2" y="235.3" class="m st1" width="33" height="155"/>
+      <rect x="462.2" y="235.3" class="m st6" width="33" height="155"/>
+    </g>
+    <g id="E">
+      <rect x="546.2" y="296.3" class="e st3" width="89" height="33"/>
+      <rect x="635.2" y="296.3" class="e st6" width="33" height="33"/>
+      <rect x="513.2" y="270.3" class="e st1" width="33" height="89"/>
+      <rect x="546.2" y="359.3" class="e st1" width="122" height="33"/>
+      <rect x="513.2" y="237.3" class="e st2" width="155" height="33"/>
+      <rect x="513.2" y="359.3" class="e st2" width="33" height="33"/>
+    </g>
+  </svg>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+ <script>
+    gsap.to(".top" , {x:-300, duration:2, ease: "steps(5)", repeat: -1, yoyo: true});
+    gsap.to(".left" , {y:100, duration:2, ease: "steps(3)", repeat: -1, yoyo: true});
+    gsap.to(".right" , {y:-100, duration:2, ease: "steps(3)", repeat: -1, yoyo: true});
+    gsap.to(".bottom" , {x:200, duration:2, ease: "steps(3)", repeat: -1, yoyo: true});
+
+    var timeline = gsap.timeline();
+    var notAboutH1 = document.getElementById("not_about");
+    var aboutH1 = document.getElementById("about");
+    function title() {
+      timeline.from(notAboutH1, {x:-150, duration: .5, alpha: 0, ease: "back"},1);
+      // timeline.from("#M", {scale:0, y:-50, duration: .5, alpha: 0});
+      timeline.from(".m", { y: -20, scale: .5, alpha: 0, stagger: .25});
+      // timeline.from("#E", {scale:0, y:-50, duration: .5, alpha: 0});
+      timeline.from(".e", { y: -20, scale: .5, alpha: 0, stagger: .25});
+      timeline.to(notAboutH1, {x:200, duration: .5, alpha: 0, ease: "back"},8);
+      timeline.from(aboutH1, {x:-150, duration: .8, alpha: 0, ease: "back"});
+      timeline.to("#M", {rotate:180, transformOrigin:"50% 67%", y:-50, duration: .5});
+    };
+    title()
+ </script>
+
+</body>
+</html>
