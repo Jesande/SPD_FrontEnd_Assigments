@@ -3,6 +3,7 @@
 --light: #f7f7f7;
 --grey: #dae1e7;
 --accent: #e28e5e;
+--visited: #775c42;
 --black: #1a1a1a;
 }
 * {
@@ -74,6 +75,11 @@ a:hover {
   color: var(--accent);
 }
 
+/* a:visited {
+  text-decoration: underline;
+  color: var(--visited);
+} */
+
 .logo {
   width: 50px;
   height: 50px;
@@ -112,6 +118,20 @@ main {
   background-color: white;
 
   box-shadow: 0px 0px 30px -14px rgba(199,199,199,1);
+  border-radius: 10px;
+  transition: transform 300ms ease-out 200ms;
+}
+
+.card:hover {
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  flex-basis: 30%;
+  flex-shrink: 150px;
+  background-color: white;
+
+  box-shadow: 0px 0px 40px 0px rgba(199,199,199,1);
   border-radius: 10px;
   transition: transform 300ms ease-out 200ms;
 }
