@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: coral;
+}
+
+body {
+  height: 100vh;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #2c2826;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: coral 1.5px solid;
+}
+
+h1 {
+  max-width: 50%;
+  font-weight: lighter;
+  font-size: 3.5em;
+}
+
+nav {
+  width: 15%;
+}
+
+.burger-btn {
+  width: 50px;
+  height: 50px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color:#2c2826;
+  box-shadow: rgb(0, 0, 0) 0 0 10px 2px;
+}
+
+.line-top {
+  margin: 3px auto;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: coral;
+  animation-name: x45;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+}
+
+.line-middle {
+  margin: 3px auto;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: coral;
+  animation-name: gone;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+}
+
+.line-bottom {
+  margin: 3px auto;
+  width: 30px;
+  height: 4px;
+  
+  border-radius: 2px;
+  background-color: coral;
+
+  animation-name: x-45;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-in;
+}
+
+@keyframes gone {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+}
+@keyframes x45 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(45deg) translate(6px, 8px);
+  }
+  80% {
+    transform: rotate(45deg) translate(6px, 8px);
+  }
+}
+
+@keyframes x-45 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  80% {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+
+}
+
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  font-size: smaller;
+}

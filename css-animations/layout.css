@@ -1,0 +1,400 @@
+:root {
+  --pink: #F5C4CD;
+  --pinkDark: #ce7698;
+  --orange: #f39b4d;
+
+  --duration: 4s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
+  color: rgb(45, 45, 45);
+}
+
+header {
+  width: 80%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 10%;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 40px 40px;
+
+}
+
+body {
+  background-color:var(--pink);
+  animation-name: bgColor;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bgColor {
+  0% {
+    background-color: var(--pink);
+  }
+  45% {
+    background-color: var(--pink);
+  }
+  55% {
+    background-color: var(--orange);
+  }
+  95% {
+    background-color: var(--orange);
+  }
+}
+
+
+h1 {
+  padding: 2em;
+  font-weight: normal;
+  font-style: italic;
+  animation-name: Title;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Title {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
+.pink {
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(158, 158, 159, 0.534) 0 0 30px;
+
+  animation-name: pinkSection;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pinkSection {
+  0% {
+    transform: translateY(0%);
+  }
+  35% {
+    transform: translateY(0%);
+  }
+  45% {
+    transform: translateY(-100%);
+  }
+  85% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.img-pink {
+  width: 60%;
+}
+
+
+.overlay-pink{
+  width: 400px;
+  height: 200px;
+  padding: 2em;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  background-color:var(--pink);
+
+  animation-name: pinkOverlay;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pinkOverlay {
+  0% {
+    height: 0px;  
+    bottom: -15%; 
+  }
+  10% {
+    height: 200px;  
+    bottom: 0;
+  }
+  50% {
+    height: 200px;  
+    bottom: 0;
+  }
+  60% {
+    height: 150vh;
+    bottom: 0;
+  }
+  65% {
+    height: 50vh;
+    bottom: 100%;
+  }
+  100% {
+    height: 200px;
+    bottom: 100%;
+  }
+}
+
+.name-pink {
+  font-family: sans-serif;
+  font-size: .8em;
+  font-weight: normal;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  animation-name: pinkName;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pinkName {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.title-pink {
+  padding: .5em 0;
+  font-size: 2em;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--pinkDark);
+
+  animation-name: pinkTitle;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pinkTitle {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* .. */
+
+.orange {
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(158, 158, 159, 0.534) 0 0 30px;
+
+  animation-name: orangeSection;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes orangeSection {
+  0% {
+    transform: translateY(0%);
+  }
+  35% {
+    transform: translateY(0%);
+  }
+  45% {
+    transform: translateY(-100%);
+  }
+  85% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.img-orange {
+  width: 60%;
+}
+
+.overlay-orange{
+  width: 400px;
+  height: 200px;
+  padding: 2em;
+  position: absolute;
+  bottom: -100%;
+  left: 20%;
+  background-color: var(--orange);
+
+  animation-name: orangeOverlay;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes orangeOverlay {
+  0% {
+    height: 0px;  
+    bottom: -15%; 
+  }
+  10% {
+    height: 200px;  
+    bottom: 0;
+  }
+  50% {
+    height: 200px;  
+    bottom: 0;
+  }
+  60% {
+    height: 150vh;
+    bottom: 0;
+  }
+  65% {
+    height: 50vh;
+    bottom: 100%;
+  }
+  100% {
+    height: 0px;  
+    bottom: 100%;
+  }
+}
+
+
+.name-orange {
+  font-family: sans-serif;
+  font-size: .8em;
+  font-weight: normal;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  animation-name: orangeName;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes orangeName {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+}
+
+.title-orange {
+  padding: .5em 0;
+  font-size: 2em;
+  font-weight: normal;
+  font-style: italic;
+  color: #ffffff;
+
+  animation-name: orangeTitle;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes orangeTitle {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  65% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+
+
