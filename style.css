@@ -1,0 +1,133 @@
+:root {
+--primarytxt:#111111;
+--light: #f7f7f7;
+--grey: #dae1e7;
+--accent: #e28e5e;
+--black: #1a1a1a;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: transform 300ms ease-out 200ms;
+
+}
+
+html {
+  /* scroll-behavior: smooth; */
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+  background-color: var(--light);
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4 {
+  margin: .5em 0;
+  line-height: 1.5em;
+}
+  
+h1 {
+  max-width: 60%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3.5rem;
+  font-weight: lighter;
+  line-height: 1.15em;
+}
+  
+h2 {
+  max-width: 60%;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--primarytxt); 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+li {
+  padding: 0px;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/logo.svg);
+  background-position: left;
+  background-size: cover;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+
+}
+
+header {
+  padding: 0;
+  padding-left: 100px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  padding: 0 0 0 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  flex-basis: 30%;
+  flex-shrink: 150px;
+  background-color: white;
+
+  box-shadow: 0px 0px 30px -14px rgba(199,199,199,1);
+  border-radius: 10px;
+  transition: transform 300ms ease-out 200ms;
+}
+
+.card-title {
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin: 10px 0;
+}
+
+.card-date {
+  padding: 0 ;
+  margin: 0;
+  font-size: 12px;
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  justify-content: space-between;
+}
+
