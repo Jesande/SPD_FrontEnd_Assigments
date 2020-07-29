@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jesande">
+  <title>Jesande - Gallery layout</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Unica+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+
+    <nav id="nav-menu">
+      <img src="img/logo.png" alt="" class="logo">
+      <ul class="main-menu-list">
+        <li> <a href="#"> PORTFOLIO</a></li>
+        <li> <a href="#"> MISION</a></li>
+        <li> <a href="#"> ABOUT</a></li>
+        <li> <a href="#"> HIRE US</a></li>
+        <li> <a href="#"> HEADER</a></li>
+      </ul>
+      <ul class="socialmedia-menu">
+        <li><img src="img/fb.png" alt=""></li>
+        <li><img src="img/twitter.png" alt=""></li>
+        <li><img src="img/behance.png" alt=""></li>
+      </ul>
+    </nav>
+
+    <nav id="mobile-menu">
+      <img src="img/logo.png" alt="" class="logo">
+      <button id="menu-mobile-btn" >  <img src="img/icon-menu.svg" alt="" >     </button>
+
+      <ul id="mobile-menu-list" class="mobile-menu-list-off">
+        <li> <a href="#"> PORTFOLIO</a></li>
+        <li> <a href="#"> MISION</a></li>
+        <li> <a href="#"> ABOUT</a></li>
+        <li> <a href="#"> HIRE US</a></li>
+        <li> <a href="#"> HEADER</a></li>
+        <li class="socialmedia-mobile">
+          <img src="img/fb.png" alt="" width="8px" height="16px">
+        <img src="img/twitter.png" alt=""  width="15px" height="11px">
+        <img src="img/behance.png" alt="" width="18px" height="12px"></li>
+      </ul>
+    </nav>
+
+    <main class="content-grid">
+      <h1 class="content-title">On the other handwe denounce with righteous</h1>
+
+      <article class="article-one">
+        <p class="one-number">01</p>
+        <h2 class="one-title">Radio</h2>
+        <img src="img/radio.png" alt="" class="one-img">
+      </article>
+
+      <article class="article-two">
+        <p class="two-number">02</p>
+        <img src="img/clock.png" alt="" class="two-img">
+        <p class="two-description">The latest device Google glass is really becoming popular in all over the world. Among the other gadgets it has managed to get huge popularity due to its great technology.</p>
+      </article>
+
+      <article class="article-three">
+        <p class="article-number">03</p>
+        <img src="img/lamp.png" alt="" class="article-img">
+      </article>
+
+      <article class="article-four">
+        <p class="article-number">04</p>
+        <img src="img/stop_sign.png" alt="" class="article-img">
+      </article>
+
+      <article class="article-five">
+        <h3 class="five-text">The latest device Google glass is really becoming popular in all over the world. Among the other gadgets it has managed to get huge popularity due to its great technology. 
+        </h3>
+      </article>
+
+      <article class="nav-next">
+        <p>Next</p>
+        <img src="img/arrow.png" alt="">
+      </article>
+
+    </main>
+
+<footer>
+  <p class="copyright">Junipero. All Rights Reserved</p>
+  <a href="mailto:info@lstore.graphics" class="contact-email">info@lstore.graphics</a>
+</footer>
+
+</div>
+
+
+<script>
+
+  var menuBtn = document.getElementById("menu-mobile-btn");
+  var menuList = document.getElementById("mobile-menu-list");
+
+  menuBtn.addEventListener("click", openMenu);
+  function openMenu() {
+    menuList.classList.toggle("mobile-menu-list-on")
+  }
+
+
+</script>
+</body>
+</html>
